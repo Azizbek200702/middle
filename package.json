@@ -1,0 +1,26 @@
+{
+  "name": "Rtm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azizbek200702/rtm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azizbek200702/rtm/issues"
+  },
+  "homepage": "https://github.com/Azizbek200702/rtm#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.8.0"
+  }
+}
