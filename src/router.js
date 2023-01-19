@@ -6,10 +6,10 @@ const groupRouter = require("./group/router")
 const spendingRouter = require("./spending/router")
 
 
-router.use('/teacher', teacherRouter);
-router.use('/pupil', pupilRouter);
-router.use('/group', groupRouter);
-router.use('/spending', spendingRouter);
+router.use('/teachers', teacherRouter);
+router.use('/pupils', pupilRouter);
+router.use('/groups', groupRouter);
+router.use('/spendings', spendingRouter);
 
 
 module.exports = router;

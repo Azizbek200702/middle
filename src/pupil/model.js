@@ -31,10 +31,15 @@ const pupilSchema = mongoose.Schema({
         type : [],
         default: null
     },
-    dates : {
-        type: [],
-        default: null
+    date : {
+        type : String
     },
+    dates : [
+        {
+            come: String,
+            back: String
+        },
+    ],
     group : {
         type: String,
         ref: "group",
