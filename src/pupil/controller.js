@@ -50,6 +50,27 @@ module.exports = {
     }
   },
 
+  addPayment: async function (req, res) {
+    try {
+      const { pupilId, price, date, month } = req.body;
+      const pupil = await Pupil.findById(pupilId);
+      if (!pupil) {
+        return res.status(400).send("pupil is not");
+      }
+      const payment = {
+          price : price,
+          date: date,
+          month: month
+      }
+      pupil.payments.push(payment);
+      await pupil.save();
+
+      return res.status(201).send("payment succesfully");
+    } catch (err) {
+      return res.status(400).send(err);
+    }
+  },
+
   getAll: async function (req, res) {
     try {
       let pupils = await Pupil.find({});
