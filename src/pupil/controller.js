@@ -71,13 +71,61 @@ module.exports = {
     }
   },
 
-  getAll: async function (req, res) {
+  getClass: async function (req, res) {
     try {
-      let pupils = await Pupil.find({});
+      const { groupId } = req.body;
+     
+      const pupils = await Pupil.find({group : groupId})
       if (!pupils) {
         return res.status(400).send("pupillarni olishda hatolik boldi ");
       }
-      return res.status(200).send(pupils);
+      
+      // if(pupil.group == grup){
+      //   return res.status(200).json(pupil)
+      // }else{
+      //   return res.status(400).send("bu sinfda o'quvchi yo'q")
+      // }
+      return res.status(200).json(pupils)
+    } catch (err) {
+      console.log(err);
+      
+      return res.status(400).send(err);
+    }
+  },
+
+  // getClass: async function (req, res) {
+  //   try {
+  //     const { pupilId , group } = req.body;
+  //     const pupil = await Pupil.findById(pupilId)
+  //     if (!pupil) {
+  //       return res.status(400).send("pupillarni olishda hatolik boldi ");
+  //     }
+  //     const grup = {
+  //       group : group
+  //     }
+  //     pupil.group.push(grup)
+  //     await pupil.save()
+
+  //     const pupils = await Pupil.find(pupil.group == grup)
+  //     return
+
+  //     if(pupils.group == grup){
+  //       return res.status(200).json(pupil)
+  //     }else{
+  //       return res.status(400).send("bu sinfda o'quvchi yo'q")
+  //     }
+  //   } catch (err) {
+  //     return res.status(400).send(err);
+  //   }
+  // },
+
+  getAll: async function (req, res) {
+    try {
+      let pupil = await Pupil.find({});
+      if (!pupil) {
+        return res.status(400).send("pupillarni olishda hatolik boldi ");
+      }
+      return res.status(200).send(pupil);
     } catch (err) {
       return res.status(400).send(err);
     }

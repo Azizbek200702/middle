@@ -41,9 +41,9 @@ const pupilSchema = mongoose.Schema({
         },
     ],
     group : {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "group",
-        required: true
+        default : null
     },
     payments : {
         type : [
