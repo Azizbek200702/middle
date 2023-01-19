@@ -13,4 +13,8 @@ router.route('/:id').delete(pupilController.delete)
 
 router.route('/:id').put(pupilController.update)
 
+
+router.route('/attendance').post(pupilController.addArrive)
+
+
 module.exports = router
