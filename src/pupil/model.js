@@ -44,7 +44,18 @@ const pupilSchema = mongoose.Schema({
         type: String,
         ref: "group",
         required: true
-    }
+    },
+    payments : {
+        type : [
+            {
+                month: String,
+                price: Number,
+                date: String
+            }
+        ],
+        default: null
+    },
+
 }, { timestamps: true, versionKey: false })
 
 const Pupil = mongoose.model("pupil" , pupilSchema)

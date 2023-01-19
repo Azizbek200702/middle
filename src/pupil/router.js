@@ -14,6 +14,8 @@ router.route('/:id').delete(pupilController.delete)
 router.route('/:id').put(pupilController.update)
 
 
+router.route('/payment').post(pupilController.addPayment)
+
 router.route('/attendance').post(pupilController.addArrive)
 
 
