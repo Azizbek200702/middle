@@ -20,29 +20,27 @@ module.exports = {
       const pupil = await Pupil.findById(pupilId);
       if (!pupil) {
         return res.status(400).send("pupil is not");
-      } 
-      
-      let dat = ""
-      if(pupil.dates.length>=1){
-        dat = pupil.dates[pupil.dates.length-1];
-        if(dat.back == ""){
-          dat.back = date
-        }else {
+      }
+
+      let dat = "";
+      if (pupil.dates.length >= 1) {
+        dat = pupil.dates[pupil.dates.length - 1];
+        if (dat.back == "") {
+          dat.back = date;
+        } else {
           pupil.dates.push({
-            come : date,
-            back : ""
-          })
+            come: date,
+            back: "",
+          });
         }
-        await pupil.save()
-      }else {
+        await pupil.save();
+      } else {
         pupil.dates.push({
-          come : date,
-          back : ""
-        })
-        await pupil.save()
-      }  
-     
-    
+          come: date,
+          back: "",
+        });
+        await pupil.save();
+      }
 
       return res.status(201).send("succees");
     } catch (err) {
@@ -58,10 +56,10 @@ module.exports = {
         return res.status(400).send("pupil is not");
       }
       const payment = {
-          price : price,
-          date: date,
-          month: month
-      }
+        price: price,
+        date: date,
+        month: month,
+      };
       pupil.payments.push(payment);
       await pupil.save();
 
@@ -74,50 +72,40 @@ module.exports = {
   getClass: async function (req, res) {
     try {
       const { groupId } = req.body;
-     
-      const pupils = await Pupil.find({group : groupId})
+
+      const pupils = await Pupil.find({ group: groupId });
       if (!pupils) {
         return res.status(400).send("pupillarni olishda hatolik boldi ");
       }
-      
-      // if(pupil.group == grup){
-      //   return res.status(200).json(pupil)
-      // }else{
-      //   return res.status(400).send("bu sinfda o'quvchi yo'q")
-      // }
-      return res.status(200).json(pupils)
+      return res.status(200).json(pupils);
     } catch (err) {
       console.log(err);
-      
+
       return res.status(400).send(err);
     }
   },
 
-  // getClass: async function (req, res) {
-  //   try {
-  //     const { pupilId , group } = req.body;
-  //     const pupil = await Pupil.findById(pupilId)
-  //     if (!pupil) {
-  //       return res.status(400).send("pupillarni olishda hatolik boldi ");
-  //     }
-  //     const grup = {
-  //       group : group
-  //     }
-  //     pupil.group.push(grup)
-  //     await pupil.save()
-
-  //     const pupils = await Pupil.find(pupil.group == grup)
-  //     return
-
-  //     if(pupils.group == grup){
-  //       return res.status(200).json(pupil)
-  //     }else{
-  //       return res.status(400).send("bu sinfda o'quvchi yo'q")
-  //     }
-  //   } catch (err) {
-  //     return res.status(400).send(err);
-  //   }
-  // },
+  addExam: async function (req, res) {
+    try {
+      const { date, subject, teacherId, pupils } = req.body;
+      for (let i = 0; i < pupils.length; i++) {
+        let pupil = await Pupil.findById(pupils[i].pupilId)
+        const exam = {
+          date: date,
+          subject: subject,
+          teacherId: teacherId,
+          rank: pupils[i].rank,
+        }
+        console.log(pupil);
+        pupil.exams.push(exam)
+        await pupil.save()
+      }
+      return res.status(200).send("ok");
+    } catch (error) {
+      console.log(error, "hatolok catchda");
+      return res.status(400).send(error);
+    }
+  },
 
   getAll: async function (req, res) {
     try {

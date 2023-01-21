@@ -21,5 +21,7 @@ router.route('/payment').post(pupilController.addPayment)
 
 router.route('/attendance').post(pupilController.addArrive)
 
+router.route('/exams').post(pupilController.addExam)
+
 
 module.exports = router

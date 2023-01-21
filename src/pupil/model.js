@@ -27,12 +27,12 @@ const pupilSchema = mongoose.Schema({
         type : String,
         required : true
     },
-    exems : {
+    exams : {
         type : [],
         default: null
     },
     date : {
-        type : String
+        type : String,
     },
     dates : [
         {
