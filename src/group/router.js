@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const groupController = require("./controller")
+const authenticate = require("../util/athenticate")
 
+router.use(authenticate)
 
 router.route('/').post(groupController.addNew)
 

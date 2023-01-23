@@ -23,7 +23,7 @@ const teacherSchema = mongoose.Schema({
         type : String,
         required : true
     },
-    login : {
+    password : {
         type: String,
         required: true
     },
