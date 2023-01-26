@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const pupilController = require("./controller")
-const authenticate = require("../util/athenticate")
+// const authenticate = require("../util/athenticate")
 
-router.use(authenticate)
+// router.use(authenticate)
 
 router.route('/').post(pupilController.addNew)
 

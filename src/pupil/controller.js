@@ -1,4 +1,3 @@
-const { default: mongoose } = require("mongoose");
 const Pupil = require("./model");
 
 module.exports = {

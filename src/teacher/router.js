@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const teacherController = require("./controller")
-const authenticate = require("../util/athenticate")
+// const authenticate = require("../util/athenticate")
 
-router.use(authenticate)
+// router.use(authenticate)
 router.route('/').post(teacherController.addNew)
 
 router.route('/').get(teacherController.getAll)

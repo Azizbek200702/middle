@@ -31,9 +31,6 @@ const pupilSchema = mongoose.Schema({
         type : [],
         default: null
     },
-    date : {
-        type : String,
-    },
     dates : [
         {
             come: String,
