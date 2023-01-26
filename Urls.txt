@@ -1,0 +1,653 @@
+    TEACHERS
+    
+1) Method  POST  Url ===>  {{baseUrl}}/api/teachers
+req.body  {
+    "firstName": "Mahmud",
+   	"lastName": "Mahkamov",
+    "middleName": "Mahmakmovich",
+    "tel": "991112233",
+    "password": "mahmud2233",
+    "subject": "Ona-tili",
+    "group": "63c5960d928b2b02a3e52cb6"
+    "role": true
+}
+
+res.body {
+    "firstName": "Mahmud",
+    "lastName": "Mahkamov",
+    "middleName": "Mahmakmovich",
+    "tel": "991112233",
+    "password": "mahmud2233",
+    "subject": "Ona-tili",
+    "groups": [],
+    "role": true,
+    "_id": "63ce439ddf0c0f91b918c346",
+    "createdAt": "2023-01-23T08:21:49.424Z",
+    "updatedAt": "2023-01-23T08:21:49.424Z"
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+2) Method  GET  Url ===>  {{baseUrl}}/api/teachers  ===> Hammasini olish
+
+res.body  [
+    {
+        "_id": "63cd17262118e34467eea306",
+        "firstName": "Malik",
+        "lastName": "Malodsad",
+        "middleName": "Mawdojaiod",
+        "tel": "9090",
+        "password": "9090",
+        "subject": "matem",
+        "groups": [],
+        "role": true,
+        "createdAt": "2023-01-22T10:59:50.115Z",
+        "updatedAt": "2023-01-22T10:59:50.115Z"
+    },
+    {
+        "_id": "63cd22593b06b5178eaa7bce",
+        "firstName": "jiadbjidnand",
+        "lastName": "jiadbjidnand",
+        "middleName": "jiadbjidnand",
+        "tel": "9daw090",
+        "password": "909dwa0",
+        "subject": "jiadbjidnand",
+        "groups": [],
+        "role": true,
+        "createdAt": "2023-01-22T11:47:37.572Z",
+        "updatedAt": "2023-01-22T11:47:37.572Z"
+    },
+    {
+        "_id": "63cd58c60fc385ba3c25111f",
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "middleName": "middleName",
+        "tel": "1111",
+        "password": "1111",
+        "subject": "djahgd",
+        "groups": [],
+        "role": true,
+        "createdAt": "2023-01-22T15:39:50.599Z",
+        "updatedAt": "2023-01-22T15:39:50.599Z"
+    },
+    {
+        "_id": "63cd58e60fc385ba3c251121",
+        "firstName": "111111",
+        "lastName": "11111",
+        "middleName": "111",
+        "tel": "1111",
+        "password": "1111",
+        "subject": "djahgd",
+        "groups": [],
+        "role": true,
+        "createdAt": "2023-01-22T15:40:22.047Z",
+        "updatedAt": "2023-01-22T15:40:22.047Z"
+    }
+]
+
+//////////////////////////////////////////////////////////////////////////////
+
+3) Method  GET  Url ===>  {{baseUrl}}/api/teachers/63cd17262118e34467eea306 === Bittasini olish
+
+res.body {
+    {
+        "_id": "63cd17262118e34467eea306",
+        "firstName": "Malik",
+        "lastName": "Malodsad",
+        "middleName": "Mawdojaiod",
+        "tel": "9090",
+        "password": "9090",
+        "subject": "matem",
+        "groups": [],
+        "role": true,
+        "createdAt": "2023-01-22T10:59:50.115Z",
+        "updatedAt": "2023-01-22T10:59:50.115Z"
+    },
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+4) Method  PUT  Url ===>  {{baseUrl}}/api/teachers/63cd58e60fc385ba3c251121
+req.body  {
+    "firstName": "Mahmud",
+   	"lastName": "Mahkamov",
+    "middleName": "Mahmakmovich",
+    "tel": "991112233",
+    "password": "mahmud2233",
+    "subject": "Ona-tili",
+    "group": "63c5960d928b2b02a3e52cb6"
+    "role": true
+}
+
+res.body {
+    success
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+5) Method  DELETE  Url ===>  {{baseUrl}}/api/teachers/63cd58c60fc385ba3c25111f
+
+res.body {
+        "_id": "63cd58c60fc385ba3c25111f",
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "middleName": "middleName",
+        "tel": "1111",
+        "password": "1111",
+        "subject": "djahgd",
+        "groups": [],
+        "role": true,
+        "createdAt": "2023-01-22T15:39:50.599Z",
+        "updatedAt": "2023-01-22T15:39:50.599Z"
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    PUPILS
+
+1) Method  POST  Url ===>  {{baseUrl}}/api/pupils
+req.body {
+    "firstName": "Mahmud",
+   	"lastName": "Mahkamov",
+    "middleName": "Mahmakmovich",
+    "tel": "991112233",
+    "phone": "902221133",
+    "password": "mahmud2233",
+    "date": "2022-12-21 10:55"
+} 
+
+res.body {
+    "firstName": "Mahmud",
+    "lastName": "Mahkamov",
+    "middleName": "Mahmakmovich",
+    "tel": "991112233",
+    "phone": "902221133",
+    "exams": [],
+    "date": "2022-12-21 10:55",
+    "group": null,
+    "_id": "63ce45e4df0c0f91b918c348",
+    "dates": [],
+    "payments": [],
+    "createdAt": "2023-01-23T08:31:32.303Z",
+    "updatedAt": "2023-01-23T08:31:32.303Z"
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+2) Method  GET  Url ===>  {{baseUrl}}/api/pupils    ======= > Pupil hammasini olish
+
+res.body [
+    {
+        "_id": "63cba64e9b9c9443343e98b7",
+        "firstName": "Ali",
+        "lastName": "Alibej",
+        "middleName": "Aljaosa",
+        "tel": "1111111",
+        "phone": "00000000",
+        "exams": [
+            {
+                "date": "2023-01-10 10:40",
+                "subject": "ona-tili",
+                "teacherId": "63c5960d928b2b02a3e52cb6",
+                "rank": "70"
+            },
+            {
+                "date": "2023-01-10 10:40",
+                "subject": "ona-tili",
+                "teacherId": "63c5960d928b2b02a3e52cb6",
+                "rank": "100"
+            }
+        ],
+        "date": "2023-02-01",
+        "rank": "70",
+        "group": "63c5960d928b2b02a3e52cb6",
+        "dates": [],
+        "payments": [],
+        "createdAt": "2023-01-21T08:46:06.932Z",
+        "updatedAt": "2023-01-21T11:17:16.906Z"
+    },
+    {
+        "_id": "63cba65d9b9c9443343e98b9",
+        "firstName": "Mahmud",
+        "lastName": "Mamadhodov",
+        "middleName": "Mahkamovich",
+        "tel": "3030303030",
+        "phone": "0303030303",
+        "exams": [
+            {
+                "date": "2023-01-10 10:40",
+                "subject": "ona-tili",
+                "teacherId": "63c5960d928b2b02a3e52cb6",
+                "rank": "60"
+            },
+            {
+                "date": "2023-01-10 10:40",
+                "subject": "ona-tili",
+                "teacherId": "63c5960d928b2b02a3e52cb6",
+                "rank": "100"
+            }
+        ],
+        "date": "2023-02-01",
+        "rank": "70",
+        "group": "63c5960d928b2b02a3e52cb6",
+        "dates": [],
+        "payments": [],
+        "createdAt": "2023-01-21T08:46:21.243Z",
+        "updatedAt": "2023-01-21T11:17:16.926Z"
+    },
+    {
+        "_id": "63cba66b9b9c9443343e98bd",
+        "firstName": "Bunyod",
+        "lastName": "Ahmadjonov",
+        "middleName": "Mahkamovich",
+        "tel": "901234567",
+        "phone": "99999999999",
+        "exams": [],
+        "date": "2023-02-01",
+        "rank": "70",
+        "group": "63c5960d928b2b02a3e52cb6",
+        "dates": [],
+        "payments": [],
+        "createdAt": "2023-01-21T08:46:35.452Z",
+        "updatedAt": "2023-01-21T08:46:35.452Z"
+    },
+    {
+        "_id": "63cba7fbee192110ff1724bf",
+        "firstName": "Nodxasirbek",
+        "lastName": "xxsaxsaxas",
+        "middleName": "Nosxsaxasx",
+        "tel": "9900288835",
+        "phone": "9900288835",
+        "exams": [],
+        "date": "2023-01-20",
+        "rank": "70",
+        "group": null,
+        "dates": [],
+        "payments": [],
+        "createdAt": "2023-01-21T08:53:15.715Z",
+        "updatedAt": "2023-01-21T08:53:15.715Z"
+    }
+]
+
+//////////////////////////////////////////////////////////////////////////////
+
+3) Method  GET  Url ===>  {{baseUrl}}/api/pupils/63cba7fbee192110ff1724bf   ======> Pupil bittasini olish
+
+res.body {
+        "_id": "63cba7fbee192110ff1724bf",
+        "firstName": "Nodxasirbek",
+        "lastName": "xxsaxsaxas",
+        "middleName": "Nosxsaxasx",
+        "tel": "9900288835",
+        "phone": "9900288835",
+        "exams": [],
+        "date": "2023-01-20",
+        "rank": "70",
+        "group": null,
+        "dates": [],
+        "payments": [],
+        "createdAt": "2023-01-21T08:53:15.715Z",
+        "updatedAt": "2023-01-21T08:53:15.715Z"
+    }
+
+//////////////////////////////////////////////////////////////////////////////
+
+4) Method  PUT  Url ===>  {{baseUrl}}/api/pupils/63cba7fbee192110ff1724bf
+req.body  {
+    "firstName": "Vali",
+   	"lastName": "Valiyev",
+    "middleName": "Mahmakmovich",
+    "tel": "990000101",
+    "phone": "972584565",
+    "password": "vali000",
+    "date": "2022-12-21 10:55"
+} 
+
+res.body {
+    success
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+5) Method  DELETE  Url ===>  {{baseUrl}}/api/pupils/63cba66b9b9c9443343e98bd
+
+res.body {
+    "_id": "63cba66b9b9c9443343e98bd",
+    "firstName": "Bunyod",
+    "lastName": "Ahmadjonov",
+    "middleName": "Mahkamovich",
+    "tel": "901234567",
+    "phone": "99999999999",
+    "exams": [],
+    "date": "2023-02-01",
+    "rank": "70",
+    "group": "63c5960d928b2b02a3e52cb6",
+    "dates": [],
+    "payments": [],
+    "createdAt": "2023-01-21T08:46:35.452Z",
+    "updatedAt": "2023-01-21T08:46:35.452Z"
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+6) Method  POST  Url ===>  {{baseUrl}}/api/pupils/group  ==> Bu bitta gruhdagi o'quvchilarni olish uchun
+req.body  {
+    "groupId": "63c5960d928b2b02a3e52cb6"
+}
+
+res.body[
+    {
+        "_id": "63cba64e9b9c9443343e98b7",
+        "firstName": "Ali",
+        "lastName": "Alibej",
+        "middleName": "Aljaosa",
+        "tel": "1111111",
+        "phone": "00000000",
+        "exams": [
+            {
+                "date": "2023-01-10 10:40",
+                "subject": "ona-tili",
+                "teacherId": "63c5960d928b2b02a3e52cb6",
+                "rank": "70"
+            },
+            {
+                "date": "2023-01-10 10:40",
+                "subject": "ona-tili",
+                "teacherId": "63c5960d928b2b02a3e52cb6",
+                "rank": "100"
+            }
+        ],
+        "date": "2023-02-01",
+        "rank": "70",
+        "group": "63c5960d928b2b02a3e52cb6",
+        "dates": [],
+        "payments": [],
+        "createdAt": "2023-01-21T08:46:06.932Z",
+        "updatedAt": "2023-01-21T11:17:16.906Z"
+    },
+    {
+        "_id": "63cba65d9b9c9443343e98b9",
+        "firstName": "Mahmud",
+        "lastName": "Mamadhodov",
+        "middleName": "Mahkamovich",
+        "tel": "3030303030",
+        "phone": "0303030303",
+        "exams": [
+            {
+                "date": "2023-01-10 10:40",
+                "subject": "ona-tili",
+                "teacherId": "63c5960d928b2b02a3e52cb6",
+                "rank": "60"
+            },
+            {
+                "date": "2023-01-10 10:40",
+                "subject": "ona-tili",
+                "teacherId": "63c5960d928b2b02a3e52cb6",
+                "rank": "100"
+            }
+        ],
+        "date": "2023-02-01",
+        "rank": "70",
+        "group": "63c5960d928b2b02a3e52cb6",
+        "dates": [],
+        "payments": [],
+        "createdAt": "2023-01-21T08:46:21.243Z",
+        "updatedAt": "2023-01-21T11:17:16.926Z"
+    }
+]
+
+//////////////////////////////////////////////////////////////////////////////
+
+7) Method  POST  Url ===>  {{baseUrl}}/api/pupils/payment ==> o'quvchilar oylik  to'lo'vi uchun
+req.body  {
+    "pupilId": "63c5960d928b2b02a3e52cb6",
+    "price": 1000,
+    "date": "2023-01-23 11:40",
+    "month": "Fevral"
+}
+
+res.body {
+    payment succesfully
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+8) Method  POST  Url ===>  {{baseUrl}}/api/pupils/attendance  ==> O'quvchini qachon kelganligi qachon ketganlig vaqti uchun
+req.body  {
+    "pupilId": "63c5960d928b2b02a3e52cb6"
+    "date": "2023-01-23 11:40"
+}
+
+res.body {
+    succees
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+9) Method  POST  Url ===>  {{baseUrl}}/api/pupils/exams ==> Bitta gruh o'quvchilarni imtihon natijalari uchun
+req.body  {
+    "pupils": [
+        {
+            "pupil": "63c5960d928b2b02a3e52cb6",
+            "rank": "70"
+        },
+        {
+            "pupil": "63c5960d92da4d2b02a3e52cb6",
+            "rank": "60"
+        }
+    ]
+    "teacherId": "63c5960d928b2b02a3e52cb6",
+    "subject": "Ona-tili",
+    "rank": "70",
+    "date": "2023-01-23 11:40",
+}
+
+
+res.body {
+    ok
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    GROUP
+
+1) Method  POST  Url ===>  {{baseUrl}}/api/groups
+req.body  {
+    "title": "10-A",
+   	"decription": "Lorem ddasjnofvv fsfsef"
+} 
+
+res.body {
+    "title": "10-A",
+    "decription": "Lorem ddasjnofvv fsfsef",
+    "_id": "63ce4919df0c0f91b918c35d",
+    "createdAt": "2023-01-23T08:45:13.398Z",
+    "updatedAt": "2023-01-23T08:45:13.398Z"
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+2) Method  GET  Url ===>  {{baseUrl}}/api/groups   ======= > Groupni hammasini olish
+
+res.body [
+    {
+        "_id": "63ce4919df0c0f91b918c35d",
+        "title": "10-A",
+        "decription": "Lorem ddasjnofvv fsfsef",
+        "createdAt": "2023-01-23T08:45:13.398Z",
+        "updatedAt": "2023-01-23T08:45:13.398Z"
+    },
+    {
+        "_id": "63ce4947df0c0f91b918c360",
+        "title": "10-B",
+        "decription": "dadwa dadwa dadwa",
+        "createdAt": "2023-01-23T08:45:59.517Z",
+        "updatedAt": "2023-01-23T08:45:59.517Z"
+    }
+]
+
+//////////////////////////////////////////////////////////////////////////////
+
+3) Method  GET  Url ===>  {{baseUrl}}/api/groups/63ce4919df0c0f91b918c35d   ======= > Groupni bittasini olish
+
+res.body {
+    "_id": "63ce4919df0c0f91b918c35d",
+    "title": "10-A",
+    "decription": "Lorem ddasjnofvv fsfsef",
+    "createdAt": "2023-01-23T08:45:13.398Z",
+    "updatedAt": "2023-01-23T08:45:13.398Z"
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+4) Method  PUT  Url ===>  {{baseUrl}}/api/groups/63ce4919df0c0f91b918c35d
+req.body  {
+    "title": "8-A",
+   	"decription": "Loredam ddasjndofvv fsfsef"
+} 
+
+res.body {
+    success
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+5) Method  DELETE  Url ===>  {{baseUrl}}/api/groups/63ce4919df0c0f91b918c35d
+
+res.body {
+    "_id": "63ce4919df0c0f91b918c35d",
+    "title": "2-A",
+    "decription": "0000 00000000 0000",
+    "createdAt": "2023-01-23T08:45:13.398Z",
+    "updatedAt": "2023-01-23T08:48:08.164Z"
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    SPENDING
+    
+    
+1) Method  POST  Url ===>  {{baseUrl}}/api/spendings
+req.body  {
+    "title": "Suv",
+   	"price": 10000,
+    "date": "2023-01-23 08:00"
+}  
+
+res.body {
+    "title": "Suv",
+    "price": 10000,
+    "date": "2023-01-23 08:00",
+    "_id": "63ce4a15df0c0f91b918c366",
+    "createdAt": "2023-01-23T08:49:25.423Z",
+    "updatedAt": "2023-01-23T08:49:25.423Z"
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+2) Method  GET  Url ===>  {{baseUrl}}/api/spendings   ======= > Spendingni hammasini olish
+
+res.body [
+    {
+        "_id": "63ce4a15df0c0f91b918c366",
+        "title": "Suv",
+        "price": 10000,
+        "date": "2023-01-23 08:00",
+        "createdAt": "2023-01-23T08:49:25.423Z",
+        "updatedAt": "2023-01-23T08:49:25.423Z"
+    },
+    {
+        "_id": "63ce4a38df0c0f91b918c369",
+        "title": "Gaz",
+        "price": 100000,
+        "date": "2023-01-23 10:00",
+        "createdAt": "2023-01-23T08:50:00.210Z",
+        "updatedAt": "2023-01-23T08:50:00.210Z"
+    }
+]
+
+//////////////////////////////////////////////////////////////////////////////
+
+3) Method  GET  Url ===>  {{baseUrl}}/api/spendings/63ce4a38df0c0f91b918c369   ======= > Spendingni bittasini olish
+
+res.body {
+    "_id": "63ce4a38df0c0f91b918c369",
+    "title": "Gaz",
+    "price": 100000,
+    "date": "2023-01-23 10:00",
+    "createdAt": "2023-01-23T08:50:00.210Z",
+    "updatedAt": "2023-01-23T08:50:00.210Z"
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+4) Method  PUT  Url ===>  {{baseUrl}}/api/spendings/63ce4a38df0c0f91b918c369
+req.body  {
+    "title": "Suv",
+   	"price": 10000,
+    "date": "2023-01-23 08:00"
+} 
+
+res.body {
+    success
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+5) Method  DELETE  Url ===>  {{baseUrl}}/api/spendings/id
+
+res.body {
+    "_id": "63ce4a38df0c0f91b918c369",
+    "title": "Svet",
+    "price": 20000,
+    "date": "2023-01-23 12:00",
+    "createdAt": "2023-01-23T08:50:00.210Z",
+    "updatedAt": "2023-01-23T08:52:30.379Z"
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        Report
+
+1) Method  GET  Url ===>  {{baseUrl}}/api/reports  /// bu reportlarni olish uchun
+
+req.body {
+    "date": "2022-11-01"
+}
+
+res.body [
+    {
+        "chiqimlar": [
+            {
+                "_id": "Svet",
+                "priceAll": 450
+            }
+        ]
+    },
+    {
+        "oquvchilar": [
+            {
+                "_id": "63d0d0b4c2790ee7ee4c8691",
+                "total": 2
+            },
+            {
+                "_id": "63d0d087c2790ee7ee4c868d",
+                "total": 2
+            },
+            {
+                "_id": "63d0d0a1c2790ee7ee4c868f",
+                "total": 2
+            }
+        ]
+    }
+]
