@@ -1,5 +1,6 @@
 const Spending = require("../spending/model");
 const Pupil = require("../pupil/model");
+const Group = require("../group/model")
 const moment = require("moment");
 
 module.exports = {
@@ -43,12 +44,12 @@ module.exports = {
         },
         {
           $group: {
-            _id: "$payments.month",
+            _id: "$group",
             price: { $sum: "$payments.price" },
           },
         },
       ]);
-
+      await Group.populate(income, {path: "_id", select: "title"} );
       report = [
         { chiqimlar: spends },
         { oquvchilar: pupils },
