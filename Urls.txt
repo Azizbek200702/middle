@@ -637,16 +637,16 @@ res.body [
     {
         "oquvchilar": [
             {
-                "_id": "63d0d0b4c2790ee7ee4c8691",
-                "total": 2
-            },
-            {
-                "_id": "63d0d087c2790ee7ee4c868d",
-                "total": 2
-            },
-            {
                 "_id": "63d0d0a1c2790ee7ee4c868f",
                 "total": 2
+            }
+        ]
+    },
+    {
+        "daromad": [
+            {
+                "_id": "Noyabr",
+                "price": 200
             }
         ]
     }
